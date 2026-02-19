@@ -42,7 +42,7 @@ async function loadCategories() {
   categories.forEach((category) => {
     const btn = document.createElement("button");
     
-    // ক্যাটাগরি বাটন পিল শেপ
+    
     btn.className = "px-6 py-2 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-colors";
     
     btn.textContent = category.toUpperCase();
@@ -77,7 +77,7 @@ async function loadProducts(category) {
   productsGrid.innerHTML = "";
   products.forEach((product) => {
     const card = document.createElement("div");
-    // 👉 পুরো কার্ড সাদা এবং overflow-hidden করা হয়েছে
+    
     card.className = "bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md flex flex-col overflow-hidden";
 
     card.innerHTML = `
@@ -158,7 +158,7 @@ async function loadTrendingProducts() {
 
   trending.forEach((product) => {
     const card = document.createElement("div");
-    // 👉 পুরো কার্ড সাদা এবং overflow-hidden করা হয়েছে
+  
     card.className = "bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md flex flex-col overflow-hidden";
 
     card.innerHTML = `
