@@ -16,7 +16,7 @@
 
 <body>
     <header class="bg-base-100 shadow-md">
-        <div class="container mx-auto px-4 flex items-center justify-between h-16">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16 flex items-center justify-between h-16">
 
             <a href="#" class="text-2xl font-bold text-primary">
                 SwiftCart
@@ -34,11 +34,7 @@
                 </li>
             </ul>
 
-
-            <!-- Icons -->
             <div class="flex items-center space-x-4">
-
-
                 <div class="lg:hidden">
                     <button id="mobile-menu-btn" class="text-xl">
                         <i class="fa-solid fa-bars"></i>
@@ -50,7 +46,6 @@
                     <span id="cart-count"
                         class="absolute -top-1 -right-1 text-xs bg-primary text-white rounded-full px-1"></span>
                 </button>
-
             </div>
         </div>
     </header>
@@ -61,8 +56,7 @@
 
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
-        <!--  Hero section  -->
-        <div class="container mx-auto px-6 py-10 relative z-10 flex items-center lg:min-h-[90vh] ">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16 py-10 relative z-10 flex items-center lg:min-h-[90vh]">
             <div class="max-w-2xl text-left text-white">
 
                 <h1 class="mb-6 text-4xl md:text-6xl font-bold leading-tight">Best Collection For You</h1>
@@ -78,46 +72,43 @@
     </section>
 
     <section class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16">
 
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800">Why Choose Us</h2>
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-                    We provide top-notch services with commitment, quality,
-                    and excellence. Here's why our customers love us.
+                    We provide the best shopping experience with top-notch services.
                 </p>
             </div>
 
-            <!-- Features Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
                     <div class="mb-4 flex justify-center">
-                        <i class="fa-solid fa-truck text-indigo-500 text-3xl p-4 bg-indigo-100 rounded-lg"></i>
+                        <i class="fa-solid fa-truck text-indigo-500 text-3xl p-4 bg-indigo-50 rounded-lg"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Fast Delivery</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 text-sm">
                         Get your orders delivered to your doorstep quickly and efficiently.
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
                     <div class="mb-4 flex justify-center">
-                        <i
-                            class="fa-solid fa-headphones simple-icon text-indigo-500 text-3xl p-4 bg-indigo-100 rounded-lg"></i>
+                        <i class="fa-solid fa-headphones text-indigo-500 text-3xl p-4 bg-indigo-50 rounded-lg"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 text-sm">
                         Our support team is available around the clock to assist you.
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
                     <div class="mb-4 flex justify-center">
-                        <i class="fa-solid fa-shield-halved text-indigo-500 text-3xl p-4 bg-indigo-100 rounded-lg"></i>
+                        <i class="fa-solid fa-shield-halved text-indigo-500 text-3xl p-4 bg-indigo-50 rounded-lg"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure Payment</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 text-sm">
                         Experience safe and secure transactions with our encrypted payment systems.
                     </p>
                 </div>
@@ -125,50 +116,44 @@
 
                 <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
                     <div class="mb-4 flex justify-center">
-                        <i class="fa-solid fa-rotate-right text-indigo-500 text-3xl p-4 bg-indigo-100 rounded-lg"></i>
+                        <i class="fa-solid fa-rotate-right text-indigo-500 text-3xl p-4 bg-indigo-50 rounded-lg"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Easy Returns</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 text-sm">
                         Not satisfied? Return your products easily within 30 days.
                     </p>
                 </div>
             </div>
         </div>
-        <div id="trending-products" class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-            <h1 class="col-span-full text-center text-2xl font-bold  py-8">Trending Products</h1>
+        
+        <div id="trending-products" class="max-w-7xl mx-auto px-8 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-12 mt-8">
+            <h1 class="col-span-full text-left text-3xl font-bold pb-6">Trending Now</h1>
         </div>
     </section>
 
 
-    <!-- Modal -->
-    <div id="product-modal" class="fixed inset-0  bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
         <div class="bg-white rounded-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
             <button id="modal-close"
                 class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">&times;</button>
             <div id="modal-content"></div>
         </div>
     </div>
-    </div>
 
 
     <footer class="bg-[#1e2939] text-neutral-content">
-        <div class="max-w-7xl  mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-            <!-- Logo & Description -->
             <div>
                 <h2 class="text-3xl font-bold text-primary">SwiftCart</h2>
-                <p class="mt-4 text-sm leading-relaxed">
-                    Your one-stop shop for fashion, electronics and lifestyle products.
-                    Quality guaranteed with fast delivery.
+                <p class="mt-4 text-sm leading-relaxed text-gray-300">
+                    Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.
                 </p>
-
-
             </div>
 
-            <!-- Quick Links  -->
             <div>
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="space-y-2 mt-4">
+                <h3 class="footer-title text-white">Quick Links</h3>
+                <ul class="space-y-2 mt-4 text-gray-300">
                     <li><a href="index.html" class="link link-hover">Home</a></li>
                     <li><a href="Products.html" class="link link-hover">Products</a></li>
                     <li><a class="link link-hover">About</a></li>
@@ -176,10 +161,9 @@
                 </ul>
             </div>
 
-            <!-- Supportive section List -->
             <div>
-                <h3 class="footer-title">Support</h3>
-                <ul class="space-y-2 mt-4">
+                <h3 class="footer-title text-white">Support</h3>
+                <ul class="space-y-2 mt-4 text-gray-300">
                     <li><a class="link link-hover">FAQ</a></li>
                     <li><a class="link link-hover">Shipping</a></li>
                     <li><a class="link link-hover">Returns</a></li>
@@ -187,36 +171,38 @@
                 </ul>
             </div>
 
-            <!-- Newsletter Archive List -->
             <div>
-                <h3 class="footer-title">Newsletter</h3>
-                <p class="text-sm mt-4 mb-4">
-                    Subscribe to get updates about new products and offers.
+                <h3 class="footer-title text-white">Subscribe to our Newsletter</h3>
+                <p class="text-sm mt-4 mb-4 text-gray-300">
+                    The latest news, articles, and resources, sent to your inbox weekly.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-3">
                     <input type="email" placeholder="Enter your email"
-                        class="input input-bordered w-full text-gray-700" />
+                        class="input input-bordered w-full text-gray-700 bg-white" />
                     <button class="btn btn-primary w-full sm:w-auto">
                         Subscribe
                     </button>
                 </div>
             </div>
         </div>
-        <hr />
-        <div class="container mx-auto flex justify-between">
-            <div class="border-t border-neutral-content/20 text-center py-4 text-sm">
-                © 2025 SwiftCart. All rights reserved.
-            </div>
-            <!-- social Icon List  -->
-            <div class="flex gap-4 mt-5 text-lg">
-                <a class="hover:text-primary"><i class="fa-brands fa-facebook-f"></i></a>
-                <a class="hover:text-primary"><i class="fa-brands fa-twitter"></i></a>
-                <a class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
-                <a class="hover:text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+        
+        <div class="border-t border-neutral-content/20">
+            <div class="max-w-7xl mx-auto px-8 lg:px-16 flex flex-col sm:flex-row justify-between items-center py-6">
+                <div class="text-sm text-gray-400">
+                    © 2025 SwiftCart, Inc. All rights reserved.
+                </div>
+                <div class="flex gap-4 mt-4 sm:mt-0 text-lg text-gray-400">
+                    <a class="hover:text-primary transition-colors cursor-pointer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="hover:text-primary transition-colors cursor-pointer"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="hover:text-primary transition-colors cursor-pointer"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="hover:text-primary transition-colors cursor-pointer"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="hover:text-primary transition-colors cursor-pointer"><i class="fa-regular fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </footer>
+    
     <script src="./script.js"></script>
     <script>
         const mobileBtn = document.getElementById("mobile-menu-btn");
