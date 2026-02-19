@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-base-100 shadow-md">
+        <div class="container mx-auto px-4 flex items-center justify-between h-16">
+
+            <a href="#" class="text-2xl font-bold text-primary">SwiftCart</a>
+
+            <!-- Nav Links -->
+            <ul id="nav-links"
+                class="hidden flex-col lg:flex lg:flex-row lg:space-x-4 font-medium text-gray-800 absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none transition-[max-height] duration-500 ease-in-out z-40">
+                <li><a href="index.html"
+                        class="block px-6 py-2 lg:py-0 hover:text-violet-500 active:text-violet-500 transition-colors duration-300">Home</a>
+                </li>
+                <li><a href="Products.html"
+                        class="block px-6 py-2 lg:py-0 hover:text-violet-500 active:text-violet-500 transition-colors duration-300">Products</a>
+                </li>
+                <li><a href="#"
+                        class="block px-6 py-2 lg:py-0 hover:text-violet-500 active:text-violet-500 transition-colors duration-300">About</a>
+                </li>
+                <li><a href="#"
+                        class="block px-6 py-2 lg:py-0 hover:text-violet-500 active:text-violet-500 transition-colors duration-300">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Cart -->
+                <button class="text-xl relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count"
+                        class="absolute -top-1 -right-1 text-xs bg-primary text-white rounded-full px-1 hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <h1 class="text-3xl font-bold text-center my-8">Our Products</h1>
+
+    <!-- Category Buttons -->
+    <div id="category-buttons" class="flex justify-center gap-4 mb-8 flex-wrap"></div>
+
+    <!-- Products Grid -->
+    <div class="container mx-auto">
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4"></div>
+
+        <!-- Modal -->
+        <div id="product-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+                <button id="modal-close"
+                    class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">&times;</button>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e2939] text-neutral-content">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-3xl font-bold text-primary">SwiftCart</h2>
+                <p class="mt-4 text-sm leading-relaxed">
+                    Your one-stop shop for fashion, electronics and lifestyle products.
+                    Quality guaranteed with fast delivery.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="space-y-2 mt-4">
+                    <li><a href="index.html" class="link link-hover">Home</a></li>
+                    <li><a href="Products.html" class="link link-hover">Products</a></li>
+                    <li><a class="link link-hover">About</a></li>
+                    <li><a class="link link-hover">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h3 class="footer-title">Support</h3>
+                <ul class="space-y-2 mt-4">
+                    <li><a class="link link-hover">FAQ</a></li>
+                    <li><a class="link link-hover">Shipping</a></li>
+                    <li><a class="link link-hover">Returns</a></li>
+                    <li><a class="link link-hover">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="footer-title">Newsletter</h3>
+                <p class="text-sm mt-4 mb-4">
+                    Subscribe to get updates about new products and offers.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Enter your email"
+                        class="input input-bordered w-full text-gray-700" />
+                    <button class="btn btn-primary sm:w-auto">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="container mx-auto flex justify-between">
+            <div class="border-t border-neutral-content/20 text-center py-4 text-sm">
+                © 2025 SwiftCart. All rights reserved.
+            </div>
+            <div class="flex gap-4 mt-5 text-lg">
+                <a class="hover:text-primary"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="hover:text-primary"><i class="fa-brands fa-twitter"></i></a>
+                <a class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                <a class="hover:text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileBtn = document.getElementById("mobile-menu-btn");
+            const navLinks = document.getElementById("nav-links");
+
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener("click", () => {
+                    navLinks.classList.toggle("hidden");
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
